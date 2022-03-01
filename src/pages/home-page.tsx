@@ -7,6 +7,10 @@ import appConfig from "../config"
 import { trips, user } from "../data"
 import { Location } from "../types"
 import { diffInDays, getTripDateLabel } from "../utils/date-utils"
+import mapboxgl from "mapbox-gl"; 
+
+// @ts-ignore
+mapboxgl.workerClass = require("worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker").default;
 
 const { Header, Content } = Layout
 
@@ -59,7 +63,6 @@ const HomePage: React.FC<HomeProps> = () => {
             }
         }
         return initialViewStateDefault
-        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
     // zoom to entire trip covering all the locations
@@ -112,7 +115,6 @@ const HomePage: React.FC<HomeProps> = () => {
                 zoom: 9,
             })
         }
-        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [trip, selectedLocation])
 
     return (
