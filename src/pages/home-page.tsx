@@ -4,7 +4,7 @@ import React, {
   useMemo,
   useRef,
 } from "react";
-import Map, { MapRef, Marker, Popup } from "react-map-gl";
+import Map, { MapRef, Marker, Popup } from "react-map-gl"
 
 import { Layout, Avatar } from "antd";
 import { AntDesignOutlined } from "@ant-design/icons";
