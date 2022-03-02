@@ -7,10 +7,11 @@ import appConfig from "../config"
 import { trips, user } from "../data"
 import { Location } from "../types"
 import { diffInDays, getTripDateLabel } from "../utils/date-utils"
-import mapboxgl from "mapbox-gl"; 
+
+import mapboxgl from "mapbox-gl"
 
 // @ts-ignore
-mapboxgl.workerClass = require("worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker").default;
+mapboxgl.workerClass = require("worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker").default
 
 const { Header, Content } = Layout
 

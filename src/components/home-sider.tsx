@@ -1,10 +1,8 @@
 import React, { ChangeEvent, useMemo, useState } from "react"
 import { Link } from "react-router-dom"
-
 import { FilterOutlined, SearchOutlined, SortAscendingOutlined } from "@ant-design/icons"
 import { Badge, Input, Button, Card, Checkbox, Col, Divider, Layout, List, Popover, Radio, RadioChangeEvent, Row, Space } from "antd"
 import { CheckboxValueType } from "antd/lib/checkbox/Group"
-
 import { trips } from "../data"
 import { Trip, TripSort, TripType } from "../types"
 import { diffInDays, getTripDateLabel } from "../utils/date-utils"
